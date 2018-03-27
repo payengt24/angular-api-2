@@ -17,10 +17,5 @@ After a successful response, you should display the image(s) to your user!
 
 ### HARD Mode
 `/Search` results in Giphy have a `Pagination` Object -- Let's use this!
-Add Previous and Next buttons for the search results. Clicking previous and next should show us different images, corresponding to the pagination information. You will need to read and understand what Pagination is telling you, and how to add it to your request! 
-
-### STRETCH Mode
-Make a way to save the user's favorite images in both random and search. 
-Save user favorites in a Mongo database. 
-Add a new controller-- it should be responsible for displaying only the favorited images.
+Add Previous and Next buttons for the search results. Clicking previous and next should show us different images, corresponding to the pagination information. You will need to read and understand what Pagination is telling you, and how to add it to your request!
 
