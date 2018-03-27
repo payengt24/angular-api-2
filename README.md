@@ -9,17 +9,18 @@ You will need to make the front end app from scratch.
 -- Create 2 separate controllers in your Angular app, one for search and one for the random. Connect them to your html file.
 
 Once you've got your app set up:
+There should be two sections to your page -- one for search functionality and one for random functionality. Each section should have its own controller.
 In each controller's corresponding view, create usable forms with inputs that use the `/search` and `/random` in the Giphy API.
 For random, allow users to get a random giphy by clicking a *RANDOM* button.
 For search, allow users to input text and click a *SEARCH* button.
 After a successful response, you should display the image(s) to your user!
 
-###HARD Mode
+### HARD Mode
 `/Search` results in Giphy have a `Pagination` Object -- Let's use this!
 Add Previous and Next buttons for the search results. Clicking previous and next should show us different images, corresponding to the pagination information. You will need to read and understand what Pagination is telling you, and how to add it to your request! 
 
-###PRO Mode
+### STRETCH Mode
 Make a way to save the user's favorite images in both random and search. 
-Save user favorites in a SQL database. 
+Save user favorites in a Mongo database. 
 Add a new controller-- it should be responsible for displaying only the favorited images.
-Remember to include a database.sql file with your table create code!
+
