@@ -4,7 +4,10 @@
 <head>
   <title>~API~</title>
   <script src="vendors/angular.min.js"></script>
+  <script src="vendors/angular-route.min.js"></script>
   <script src="scripts/client.js"></script>
+  <script src="scripts/controllers/random.controller.js"></script>
+  <script src="scripts/controllers/search.controller.js"></script>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -12,7 +15,7 @@
   <h1>Angular And APIs!</h1>
 
   <div class="container" ng-controller="GiphyController as vm">
-    <textarea cols=30 rows=4 ng-model="vm.searchIn" ></textarea>
+    <textarea cols=30 rows=4 ng-model="vm.searchIn"></textarea>
     <button ng-click="vm.getSearch()">Search</button>
     <img class="searchImg" ng-if="(vm.src != '')" ng-src="{{vm.src}}">
   </div>
@@ -21,7 +24,7 @@
   <div class="container" ng-controller="RandomController as vm">
     <button ng-click="vm.getRandom()">Random</button>
     <div>
-    <img class="randomImg" ng-if="(vm.src != '')" ng-src="{{vm.src}}">
+      <img class="randomImg" ng-if="(vm.src != '')" ng-src="{{vm.src}}">
     </div>
   </div>
 
