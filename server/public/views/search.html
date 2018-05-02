@@ -1,6 +1,6 @@
 <div class="container">
   <textarea cols=30 rows=4 ng-model="vm.searchIn"></textarea>
   <button ng-click="vm.getSearch()">Search</button>
-  <img class="searchImg" ng-if="(vm.src != '')" ng-src="{{vm.src}}">
-  <button ng-if="(vm.src != '')" ng-click="vm.saveImage()">Favorite</button>
+  <img class="searchImg" ng-if="(vm.src != '')" ng-src="{{vm.src.url}}">
+  <button ng-if="(vm.src.url != '')" ng-click="vm.saveImage()">Favorite</button>
 </div>

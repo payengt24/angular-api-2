@@ -6,7 +6,7 @@ const myKey = 'nr7lnegD2M71DZLZ5KcLHipXbA3bpMu6';
 app.config(function($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: 'views/search.html',
-    controller: 'GiphyController as vm'
+    controller: 'SearchController as vm'
   }).when('/random', {
     templateUrl: 'views/random.html',
     controller: 'RandomController as vm'

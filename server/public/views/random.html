@@ -1,5 +1,5 @@
 <div class="container">
   <button ng-click="vm.getRandom()">Random</button>
-  <img class="randomImg" ng-if="(vm.src != '')" ng-src="{{vm.src}}">
-  <button ng-if="(vm.src != '')" ng-click="vm.saveImage()">Favorite</button>
+  <img class="randomImg" ng-if="(vm.src != '')" ng-src="{{vm.src.url}}">
+  <button ng-if="(vm.src.url != '')" ng-click="vm.saveImage()">Favorite</button>
 </div>

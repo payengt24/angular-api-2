@@ -1,34 +1,21 @@
-app.controller('RandomController', ['$http', function($http) {
-  console.log('random');
+app.controller('RandomController', ['$http', 'RandomService', function ($http, RandomService) {
+  console.log('RandomController works');
 
   var self = this;
-
-  self.src = '';
+  self.src = RandomService.src
   
+
+
   self.getRandom = function () {
-    $http({
-      method:'GET', 
-      url: 'https://api.giphy.com/v1/gifs/random',
-      params: {api_key: myKey, limit: 1}
-    })
-      .then(function(response) {
-        console.log(response.data.data.images.original.url);
-        self.src = response.data.data.images.original.url;
-      })
+    RandomService.getRandom ()
+
+
+  }
+
+  self.saveImage = function () {
+    RandomService.saveImage()
+
   }
 
 
-  self.saveImage = function () {
-    $http({
-      method: 'POST',
-      url: '/favorite',
-      data: { src: self.src }
-    })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-    }
 }])
